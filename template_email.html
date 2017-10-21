@@ -1,0 +1,16 @@
+<div class="email">
+	<div class="email_info"><!--message header and Back and Reply buttons-->
+		<p class="inbox_list-from">From:{{email.message.from}}</p>
+		<p class="inbox_list-date">Date:{{email.message.date | date:'dd/MM/yyyy'}}</p>
+		<p class="inbox_list-subject">{{email.message.subject}}</p>
+		<a href="" ng-click="reply=!reply" class="email_reply">Reply</a>
+		<a ng-href="/#/inbox" class="email_back">Back</a>
+	</div>
+
+	<div class="email_content" ng-bind-html="email.message.content"></div><!--message content-->
+
+	<div class="email_response" ng-show="reply"><!--Reply text and send button-->
+		<textarea ng-model="response" class="email_response-text" placeholder="Enter a reply..."></textarea>
+		<a href="" ng-click="email.reply"(response);>Send</a>
+	</div>
+</div>

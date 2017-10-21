@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="gmailApp">
+<head>
+	<meta charset="utf-8">
+	<title>Gmail Clone</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak, .x-ng-cloak{
+			display: none !important;
+		}
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<header class="header" role="banner"><!--Header-->
+			<div class="header_text">
+				<p>Angular Gmail Clone by <a href="http//:github.com/sajadagr">Sajad Ahmad Ahanger</a></p>
+			</div>
+		</header>
+
+		<main class="main" role="main">
+			<div ng-view class="flex"></div>
+		</main>
+
+		<!--Liberaries-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.4/angular-sanitize.js"></script>
+	
+
+	<!-- Application Files -->
+    <script src="app.js"></script>
+    <script src="controller_inbox.js"></script>
+    <script src="controller_email.js"></script>
+    <script src="factory_inbox.js"></script>
+    <script src="factory_email.js"></script>
+    <script src="directive_inbox.js"></script>
+    <script src="directive_email.js"></script>
+</body>
+</html>
